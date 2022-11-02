@@ -1,23 +1,12 @@
 package com.faa1192.dpsman;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class RegNumberGenerator {
-    private static final ArrayList<String> letterList = new ArrayList<>() {{
-        add("А");
-        add("Е");
-        add("Т");
-        add("О");
-        add("Р");
-        add("Н");
-        add("У");
-        add("К");
-        add("Х");
-        add("С");
-        add("В");
-        add("М");
-    }};
+    private static final ArrayList<String> letterList = (ArrayList<String>) Arrays.asList(new String[]
+            {"А", "Е", "Т", "О", "Р", "Н", "У", "К", "Х", "С", "В", "М"});
     private static final int size = letterList.size();
     private static int letterIndex1 = 0;
     private static int letterIndex2 = 0;
