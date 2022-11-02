@@ -51,13 +51,13 @@ public class RegNumberGenerator {
     private static void updateLetter() {
         letterIndex3++;
         if (letterIndex3 == size) {
-            letterIndex3 -= size;
+            letterIndex3 = 0;
             letterIndex2++;
             if (letterIndex2 == size) {
-                letterIndex2 -= size;
+                letterIndex2 = 0;
                 letterIndex1++;
                 if (letterIndex1 == size) {
-                    letterIndex1 -= size;
+                    letterIndex1 = 0;
                 }
             }
         }
@@ -71,6 +71,7 @@ public class RegNumberGenerator {
         }
         return getRegNumberFormatted();
     }
+
     private static String random() {
         digits = (int) (Math.random() * 1000);
         letterIndex1 = getRandomLetterIndex();
